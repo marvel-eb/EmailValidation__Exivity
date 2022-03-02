@@ -20,6 +20,7 @@ const StyledInput = styled.input`
 
 type InputAttributes = Omit<HTMLAttributes<HTMLInputElement>, 'onChange'>
 
+
 export interface InputProps extends InputAttributes {
   value?: string
   onChange?: (value: string, e: ChangeEvent<HTMLInputElement>) => void
@@ -30,10 +31,22 @@ export const Input = ({ onChange, ...props }: InputProps) => {
     onChange && onChange(e.target.value, e)
   }
 
+  //
+
+
+
   return (
+    
     <StyledInput
       data-testid={INPUT_SELECTOR} 
       {...props} 
-      onChange={inputOnChange} />
+      onChange={inputOnChange} 
+
+      />
+
+  
+
   )
 }
+
+// export default Input;

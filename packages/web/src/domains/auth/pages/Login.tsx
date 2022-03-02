@@ -14,7 +14,14 @@ export function LoginPage() {
   return (
     <Layout>
       <Panel>
-        <Input placeholder='email' />
+        
+        <Input placeholder='Your Email Address'
+        
+        />
+
+
+
+
       </Panel>
     </Layout>
   )

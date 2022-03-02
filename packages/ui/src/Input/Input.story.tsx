@@ -24,11 +24,14 @@ export default {
 } as Meta
 
 export const Default: StoryType = {
-  name: 'Text',
+  name: 'Email',
   args: {
     value: 'Input'
   }
 }
+
+
+
 
 export const Controlled: StoryType = {
   name: 'Controlled',

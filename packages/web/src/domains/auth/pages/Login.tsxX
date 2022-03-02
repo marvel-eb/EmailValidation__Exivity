@@ -16,11 +16,7 @@ export function LoginPage() {
   return (
     <Layout>
       <Panel>
-<<<<<<< Updated upstream:packages/web/src/domains/auth/pages/Login.tsx
-        <Input placeholder='email' />
-=======
         <Input placeholder="Your Email Address" />
->>>>>>> Stashed changes:packages/web/src/domains/auth/pages/Login.tsxX
       </Panel>
     </Layout>
   );

@@ -1,0 +1,29 @@
+import React, { useState } from "react";
+
+import styled from "styled-components";
+import { Panel, Input } from "@zealous/ui";
+
+const Layout = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f4f4f4;
+`;
+
+export function LoginPage() {
+  return (
+    <Layout>
+      <Panel>
+<<<<<<< Updated upstream:packages/web/src/domains/auth/pages/Login.tsx
+        <Input placeholder='email' />
+=======
+        <Input placeholder="Your Email Address" />
+>>>>>>> Stashed changes:packages/web/src/domains/auth/pages/Login.tsxX
+      </Panel>
+    </Layout>
+  );
+}
+
+export default LoginPage;

@@ -1,0 +1,23 @@
+
+.emailInput{
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  width: 400px;
+display: flex;
+flex-direction: row;
+margin-top: 10px;
+}
+
+.successMessage {
+    color: rgb(17, 172, 3);
+    
+  }
+  
+  .errorMessage {
+    color: rgb(243, 0, 0);
+  }
+  .successMessage, .errorMessage{
+      font-size: 2rem;
+  }

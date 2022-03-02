@@ -4,7 +4,6 @@ import React, { useState } from "react";
 // Import Styleshee // EPHREM
 import "../../../Styles/main.css";
 
-
 import styled from "styled-components";
 import { Panel, Input } from "@zealous/ui";
 
@@ -19,9 +18,8 @@ const Layout = styled.div`
 ///////////////////////////////////////// EPHREM
 // Functional Component (arrow Function)
 // const LoginPage = () => {
-  //  function  LoginPage(){
-  export function LoginPage() {
-
+// function  LoginPage(){
+export function LoginPage() {
   const [isValid, setIsValid] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -42,10 +40,10 @@ const Layout = styled.div`
   return (
     <Layout>
       <Panel>
-        <Input placeholder="Your Email Address" />
+        {/* <Input placeholder="Enter Your Email Address" /> */}
 
         <input
-        className="emailInput"
+          className="emailInput"
           type="email"
           placeholder="Enter your email"
           onChange={validateEmail}
@@ -53,13 +51,14 @@ const Layout = styled.div`
 
         {/* Success / Error Messages Goes Here */}
 
-        <div className={`message ${isValid ? "successMessage" : "errorMessage"}`}>
+        <div
+          className={`message ${isValid ? "successMessage" : "errorMessage"}`}
+        >
           {message}
         </div>
-        
       </Panel>
     </Layout>
   );
-};
+}
 
 // export default LoginPage;

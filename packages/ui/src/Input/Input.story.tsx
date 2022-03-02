@@ -9,7 +9,7 @@ import "../../../web/src/Styles/main.css";
 
 type StoryType = StoryObj<InputProps>
 
-// Component 01
+// Module 01
 const Template: Story<InputProps> = (args) => {
 const [state, setState] = useState(args.value || '')
 
@@ -62,7 +62,7 @@ if (result.test(email)) {
 
 
 
-// Component 02
+// Module 02
 export default {
   title: 'Components/Input',
   component: Template.bind({}),
@@ -71,8 +71,10 @@ export default {
   }
 } as Meta
 
+
+// Module 03
 export const Default: StoryType = {
-  name: 'Text',
+  name: 'Email',
   args: {
     value: 'Input'
   }
@@ -80,7 +82,7 @@ export const Default: StoryType = {
 
 
 
-// Component 03
+// Module 04
 export const Controlled: StoryType = {
   name: 'Controlled',
   args: {

@@ -5,7 +5,7 @@ import { Input, InputProps, INPUT_SELECTOR } from './Input'
 
 ////////////////////////////////////////////////////
 // Import Styleshee // EPHREM
-import "../../../Styles/main.css";
+import "../../../web/src/Styles/main.css";
 
 type StoryType = StoryObj<InputProps>
 
@@ -34,27 +34,32 @@ if (result.test(email)) {
 };
 
   return (
-  
-  <Input {...args} value={state} onChange={(value, e) => {
+  <>
+  <Input {...args} value={state} onChange={ (value, e) => {
     setState(value)
-    args.onChange && args.onChange(value, e)
-  }} />
+ 
+  args.onChange && args.onChange(value,  e) 
+ }} />
 
-  <Input
-  type="email"
+
+  {/* <Input
+  // type="email"
   placeholder="Enter your email"
   onChange={validateEmail}
-/>
+/> */}
 
-{/* STYLES = Success / Error Messages Goes Here */}
+
+
+{/* //  STYLES = Success / Error Messages Goes Here  */}
 
 <div className={`message ${isValid ? "successMessage" : "errorMessage"}`}>
 {message}
 </div>
-
+ </>
   
   );
-}
+};
+
 
 
 // Component 02
@@ -73,12 +78,9 @@ export const Default: StoryType = {
   }
 }
 
-<<<<<<< Updated upstream
-=======
 
 
 // Component 03
->>>>>>> Stashed changes
 export const Controlled: StoryType = {
   name: 'Controlled',
   args: {

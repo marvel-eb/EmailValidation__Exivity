@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 
 ////////////////////////////////////////////////////
 // Import Styleshee // EPHREM
@@ -19,7 +19,7 @@ const Layout = styled.div`
 ///////////////////////////////////////// EPHREM
 // Functional Component (arrow Function)
 // const LoginPage = () => {
-  //  function  LoginPage (){
+  //  function  LoginPage(){
   export function LoginPage() {
 
   const [isValid, setIsValid] = useState(false);

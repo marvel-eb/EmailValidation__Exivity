@@ -2,23 +2,14 @@ import { Component, useState } from "react";
 import { within, userEvent } from "@storybook/testing-library";
 import { Story, Meta, StoryObj } from "@storybook/react";
 import { Input, InputProps, INPUT_SELECTOR } from "./Input";
-
-////////////////////////////////////////////////////
-// Import Styleshee // EPHREM
-import "../../../web/src/Styles/main.css";
-
 type StoryType = StoryObj<InputProps>;
-
-// Module 01
 const Template: Story<InputProps> = (args) => {
   const [state, setState] = useState(args.value || "");
 
-  ////////////////////////////////////////////////////
-  // Let us handle Success / Error Messages // EPHREM
   const [isValid, setIsValid] = useState(false);
   const [message, setMessage] = useState("");
 
-  // Email pattern to catch  errors
+  // Regular Expression (A sequence of characters that specifies a search pattern in text)
   const result =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -35,7 +26,8 @@ const Template: Story<InputProps> = (args) => {
 
   return (
     <>
-      <Input
+      {/* Disbaled */}
+      {/* <Input
         {...args}
         value={state}
         onChange={(value, e) => {
@@ -43,12 +35,12 @@ const Template: Story<InputProps> = (args) => {
 
           args.onChange && args.onChange(value, e);
         }}
-      />
+      /> */}
 
-      <Input placeholder="Enter your email" onChange={validateEmail} />
+      {/* Rendering Input - Email */}
+      <input placeholder="Enter Your Email" onChange={validateEmail} />
 
       {/* //  STYLES = Success / Error Messages Goes Here  */}
-
       <div className={`message ${isValid ? "successMessage" : "errorMessage"}`}>
         {message}
       </div>
@@ -56,7 +48,6 @@ const Template: Story<InputProps> = (args) => {
   );
 };
 
-// Module 02
 export default {
   title: "Components/Input",
   component: Template.bind({}),
@@ -65,7 +56,6 @@ export default {
   },
 } as Meta;
 
-// Module 03
 export const Default: StoryType = {
   name: "Email",
   args: {
@@ -73,7 +63,6 @@ export const Default: StoryType = {
   },
 };
 
-// Module 04
 export const Controlled: StoryType = {
   name: "Controlled",
   args: {

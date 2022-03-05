@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-
-////////////////////////////////////////////////////
-// Import Styleshee // EPHREM
-import "../../../Styles/main.css";
-
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Panel, Input } from "@zealous/ui";
 
 const Layout = styled.div`
@@ -15,14 +10,30 @@ const Layout = styled.div`
   width: 100%;
   background-color: #f4f4f4;
 `;
-///////////////////////////////////////// EPHREM
-// Functional Component (arrow Function)
-// const LoginPage = () => {
-// function  LoginPage(){
+
+const MessageWrapper = styled.div`
+  ${(props) => props.addCSS}
+`;
+
+// const emailInput = styled.input`
+//   background-color: #eaeaea;
+//   border: none;
+//   border-radius: 4px;
+//   padding: 12px;
+//   width: 400px;
+//   display: flex;
+//   flex-direction: row;
+//   margin-top: 10px;
+// `;
+
+const myCSS = css`
+  color: red;
+`;
+
 export function LoginPage() {
   const [isValid, setIsValid] = useState(false);
   const [message, setMessage] = useState("");
-
+  // Regular Expression (A sequence of characters that specifies a search pattern in text)
   const result =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -40,25 +51,30 @@ export function LoginPage() {
   return (
     <Layout>
       <Panel>
+        {/* Option 01 */}
         {/* <Input placeholder="Enter Your Email Address" /> */}
 
-        <input
-          className="emailInput"
-          type="email"
-          placeholder="Enter your email"
-          onChange={validateEmail}
-        />
+        {/* Option 02 */}
+          <input
+            type="email"
+            placeholder="Enter your email"
+            onChange={validateEmail}
+          />
+        <MessageWrapper
+          addCSS={`${
+            isValid ? "color:rgb(17, 172, 3)" : "color:rgb(243, 0, 0)"
+          }`}
+        >
+          {message}
+        </MessageWrapper>
 
-        {/* Success / Error Messages Goes Here */}
-
-        <div
+        {/* Reserved */}
+        {/* <div
           className={`message ${isValid ? "successMessage" : "errorMessage"}`}
         >
           {message}
-        </div>
+        </div> */}
       </Panel>
     </Layout>
   );
 }
-
-// export default LoginPage;

@@ -15,6 +15,9 @@ const MessageWrapper = styled.div`
   ${(props) => props.addCSS}
 `;
 
+const Test = styled.div`
+  ${(props) => props.addCSS}
+`;
 // const emailInput = styled.input`
 //   background-color: #eaeaea;
 //   border: none;
@@ -26,9 +29,9 @@ const MessageWrapper = styled.div`
 //   margin-top: 10px;
 // `;
 
-const myCSS = css`
-  color: red;
-`;
+// const myCSS = css`
+//   color: red;
+// `;
 
 export function LoginPage() {
   const [isValid, setIsValid] = useState(false);
@@ -55,11 +58,15 @@ export function LoginPage() {
         {/* <Input placeholder="Enter Your Email Address" /> */}
 
         {/* Option 02 */}
+
+        <Test>
           <input
             type="email"
             placeholder="Enter your email"
             onChange={validateEmail}
           />
+        </Test>
+
         <MessageWrapper
           addCSS={`${
             isValid ? "color:rgb(17, 172, 3)" : "color:rgb(243, 0, 0)"

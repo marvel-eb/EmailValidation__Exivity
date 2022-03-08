@@ -1,5 +1,7 @@
-import styled from 'styled-components'
-import { Panel, Input } from '@zealous/ui'
+import React, { useState } from "react";
+
+import styled from "styled-components";
+import { Panel, Input } from "@zealous/ui";
 
 const Layout = styled.div`
   display: flex;
@@ -8,14 +10,16 @@ const Layout = styled.div`
   height: 100%;
   width: 100%;
   background-color: #f4f4f4;
-`
+`;
 
 export function LoginPage() {
   return (
     <Layout>
       <Panel>
-        <Input placeholder='email' />
+        <Input placeholder="Your Email Address" />
       </Panel>
     </Layout>
-  )
+  );
 }
+
+export default LoginPage;

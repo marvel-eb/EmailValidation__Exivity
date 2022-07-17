@@ -1,5 +1,9 @@
-# zealous
+# ZEALOUS ASSIGNMENT
 
+## Email Validation -  [ Fronr-End Engineer Coding Test]
+
+
+# zealous
 ## Packages
 
 In the packages folder you find the following projects:
